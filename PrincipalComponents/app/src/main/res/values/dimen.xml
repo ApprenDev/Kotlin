@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dimen -->
+
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+
+    <!-- Strings -->
+
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+
+</resources>
