@@ -2,14 +2,29 @@
 <resources>
     <string name="app_name">PrincipalComponents</string>
 
+    <!-- General -->
+
+    <string name="general_send">Send</string>
+    <string name="general_error">¡Oops!</string>
+    <string name="general_success">¡Listo!</string>
+
     <!-- Errors -->
 
-    <string name="error_not_internet">No tienes internet, revisa la conexion.</string>
+    <string name="error_wrong_email">Ingresa un correo valido</string>
+    <string name="error_empty_password">Ingrese una contraseña</string>
+    <string name="error_not_internet">No tienes internet, revisa la conexion</string>
 
     <!-- Log in -->
 
     <string name="login_btn_login">Ingresar</string>
-    <string name="login_hint_email">Correo electronico</string>
     <string name="login_hint_password">Contraseña</string>
+    <string name="login_hint_email">Correo electronico</string>
+    <string name="login_success_message">Esto funciona</string>
+    <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>
+
+    <!-- Forgot password -->
+
+    <string name="forgot_message_success">Correo electrónico de recuperación enviado correctamente</string>
+    <string name="forgot_message">Ingrese su correo electrónico para recuperar la contraseña. Sigue las instrucciones</string>
 
 </resources>

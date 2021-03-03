@@ -98,15 +98,4 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background_login" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="0dp"
-        android:textAlignment="center"
-        android:layout_height="wrap_content"
-        android:text="@string/login_forgot_password"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

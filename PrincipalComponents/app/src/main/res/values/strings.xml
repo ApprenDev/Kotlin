@@ -1,8 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PrincipalComponents</string>
 
+    <!-- General -->
+
+    <string name="general_send">Send</string>
+    <string name="general_error">Oops!</string>
+    <string name="general_success">Done!</string>
+
     <!-- Errors -->
 
+    <string name="error_wrong_email">Please enter a valid email</string>
+    <string name="error_empty_password">Please enter a password</string>
     <string name="error_not_internet">You dont have internet connection. Please try again!</string>
 
     <!-- Log in -->
@@ -10,5 +19,12 @@
     <string name="login_btn_login">Log In</string>
     <string name="login_hint_email">Email Address</string>
     <string name="login_hint_password">Password</string>
+    <string name="login_success_message">This works</string>
+    <string name="login_forgot_password">Do you forgot password?</string>
+
+    <!-- Forgot password -->
+
+    <string name="forgot_message_success">Recovery email sent successfully</string>
+    <string name="forgot_message">Enter your email to retrieve the password. Follow the instructions</string>
 
 </resources>

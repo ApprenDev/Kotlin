@@ -1,70 +1,84 @@
 package com.apprendev.principalcomponents
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.util.Patterns
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.etEmail
+import kotlinx.android.synthetic.main.dialog_error_message.*
+import www.sanju.motiontoast.MotionToast
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
-    lateinit var etEmail: EditText
-    lateinit var btnLogin: Button
-    lateinit var etPassword: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        etEmail = findViewById(R.id.etEmail)
-        btnLogin = findViewById(R.id.btnLogin)
-        etPassword = findViewById(R.id.etPassword)
-
         btnLogin.setOnClickListener(this)
+        tvForgotPassword.setOnClickListener(this)
 
-        etEmail.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                if (s!!.isNotEmpty()) {
-                    etPassword.isEnabled = true
-
-                } else {
-                    etPassword.text.clear()
-                    etPassword.isEnabled = false
-                }
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-        })
-
-        etPassword.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                if (s!!.isNotEmpty()) {
-                    btnLogin.isEnabled = true
-                    btnLogin.setBackgroundResource(R.drawable.background_button)
-
-                } else {
-                    btnLogin.isEnabled = false
-                    btnLogin.setBackgroundResource(R.drawable.backgroun_button_disable)
-                }
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-        })
     }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.btnLogin -> {
-                //Action
+                goToLogin(etEmail.text.toString(), etPassword.text.toString())
+            }
+            R.id.tvForgotPassword -> {
+                showForgotPassword()
             }
         }
     }
 
+    private fun goToLogin(email: String, password: String) {
+        when {
+            !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                showMessageError(getString(R.string.error_wrong_email))
+            }
+            password.isEmpty() -> {
+                showMessageError(getString(R.string.error_empty_password))
+            }
+            else -> {
+                showMessageSuccess(getString(R.string.login_success_message))
+            }
+        }
+    }
+
+    private fun showForgotPassword() {
+        val view = LayoutInflater.from(this).inflate(R.layout.dialog_error_message, null)
+        val builder = AlertDialog.Builder(this).setView(view)
+        val forgotDialog = builder.show()
+
+        forgotDialog.imgExit.setOnClickListener { forgotDialog.dismiss() }
+
+        forgotDialog.btnSend.setOnClickListener {
+            forgotDialog.dismiss()
+            showMessageSuccess(getString(R.string.forgot_message_success))
+        }
+    }
+
+    private fun showMessageError(msgError: String) {
+        MotionToast.createToast(
+            this, getString(R.string.general_error), msgError,
+            MotionToast.TOAST_ERROR,
+            MotionToast.GRAVITY_BOTTOM,
+            MotionToast.LONG_DURATION,
+            ResourcesCompat.getFont(this, R.font.helvetica_regular)
+        )
+    }
+
+    private fun showMessageSuccess(msg: String) {
+        MotionToast.createToast(
+            this, getString(R.string.general_success), msg,
+            MotionToast.TOAST_SUCCESS,
+            MotionToast.GRAVITY_BOTTOM,
+            MotionToast.LONG_DURATION,
+            ResourcesCompat.getFont(this, R.font.helvetica_regular)
+        )
+    }
 
 }
