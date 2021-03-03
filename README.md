@@ -9,3 +9,6 @@ Kotlin Basics - P2
 
 Kotlin Basics - P3
 - In this section you can fin out practices with the loops, list and functions.
+
+Principal Components
+- We will know the main components of Android and how it works
