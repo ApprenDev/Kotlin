@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BottomNavigation</string>
+
+    <!-- Navigation -->
+
+    <string name="nav_feed">News</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_account">Account</string>
+
+    <!-- Home -->
+
+    <string name="home_title">Home</string>
+
+    <!-- Feed -->
+
+    <string name="feed_title">News</string>
+
+    <!-- Account -->
+
+    <string name="account_title">Account</string>
+
+</resources>
