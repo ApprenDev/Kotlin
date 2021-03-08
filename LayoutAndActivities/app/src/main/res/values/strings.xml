@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LayoutAndActivities</string>
+
+    <!-- MainActivity -->
+
+    <string name="one_main_button">LinearLayout</string>
+    <string name="two_main_button">RelativeLayout</string>
+    <string name="thirty_main_button">ConstraintLayout</string>
+
+</resources>
