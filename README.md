@@ -18,3 +18,6 @@ Layouts and Activities
 
 Fragments
 - We will know the Static and dinamically fragments.
+
+BottomNavigation
+- We will know how works BottomNavigation with fragments.
