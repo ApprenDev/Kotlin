@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <string name="btn_one">One</string>
+    <string name="btn_two">Two</string>
+    <string name="btn_three">Three</string>
+
+    <!-- Fragment one -->
+    <string name="one_title">Hello</string>
+
+    <!-- Fragment two -->
+    <string name="two_title">Android</string>
+
+    <!-- Fragment Three -->
+    <string name="three_title">Developer</string>
+
+</resources>

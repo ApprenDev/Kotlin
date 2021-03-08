@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOne"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-79dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:text="@string/btn_one"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:text="@string/btn_two"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnThree"
+        app:layout_constraintStart_toEndOf="@+id/btnOne" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:text="@string/btn_three"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTwo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
