@@ -15,3 +15,6 @@ Principal Components
 
 Layouts and Activities
 - We will know the Activities and the respective layouts of Android and how it works.
+
+Fragments
+- We will know the Static and dinamically fragments.
