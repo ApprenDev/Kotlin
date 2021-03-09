@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">NavigationDrawer</string>
+
+    <!-- Navigation -->
+
+    <string name="nav_one">One</string>
+    <string name="nav_two">Two</string>
+    <string name="nav_three">Three</string>
+    <string name="nav_extras">Extras</string>
+    <string name="nav_extras_one">Extra One</string>
+
+    <!-- Profile -->
+
+    <string name="profile_name">Simple User</string>
+    <string name="profile_email">example@domain.com</string>
+
+    <!-- Fragment One -->
+
+    <string name="one_title">One</string>
+
+    <!-- Fragment two -->
+
+    <string name="two_title">Two</string>
+
+    <!-- Fragment three -->
+
+    <string name="three_title">Three</string>
+
+</resources>
