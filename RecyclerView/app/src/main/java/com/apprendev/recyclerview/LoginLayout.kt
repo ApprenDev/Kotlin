@@ -1,5 +1,6 @@
 package com.apprendev.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -19,7 +20,7 @@ class LoginLayout : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.btnLogin -> Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show()
+            R.id.btnLogin -> startActivity(Intent(this, MainActivity::class.java))
             R.id.btnSignUp -> Toast.makeText(this, "Sign Up", Toast.LENGTH_SHORT).show()
         }
     }
